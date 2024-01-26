@@ -1,6 +1,7 @@
 @import 'composant/header.css';
 @import 'base_fonts/fonts.css';
 @import 'composant/footer.css';
+@import 'composant/modale.css';
 
 :root {
     --hover: #ffd6d6;
