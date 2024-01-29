@@ -11,6 +11,8 @@
 
 get_header();
 
-get_template_part('single_photo');
+?>
 
+<?php
 get_footer();
+?>
