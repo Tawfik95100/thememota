@@ -5,21 +5,35 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
  * @package WordPress
- * @subpackage Twenty_Twenty_One
- * @since Twenty Twenty-One 1.0
+ * @subpackage thememota
+ * @since theme mota 1.0
  */
 
 get_header();
+?>
 
+<main class='main'>
+
+
+
+<?php
 /* Start the Loop */
 while ( have_posts() ) :
 	the_post();
-	get_template_part( 'template-parts/content/content-page' );
-
-	// If comments are open or there is at least one comment, load up the comment template.
-	if ( comments_open() || get_comments_number() ) {
-		comments_template();
-	}
+	?>
+<h1 class='titre'>
+	<?php the_title();?>
+</h1> 
+<section class='container'>
+<?php the_content();?>
+</section>
+	<?php
 endwhile; // End of the loop.
+?>
 
+</main>
+
+<?php
 get_footer();
+?>
+

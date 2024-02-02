@@ -2,6 +2,7 @@
 @import 'base_fonts/fonts.css';
 @import 'composant/footer.css';
 @import 'composant/modale.css';
+@import 'composant/album.css';
 
 :root {
     --hover: #ffd6d6;
@@ -24,6 +25,10 @@
     overflow: scroll;
   }
   
+.titre{
+  display: none;
+}
+
   p {
     margin-bottom: 15px;
     font-family: "Poppins_Regular";

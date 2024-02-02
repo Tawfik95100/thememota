@@ -1,0 +1,133 @@
+.album{
+    display: flex;
+    flex-direction: column;
+    padding-top: 76px;
+    max-width: 80%;
+    margin: auto;
+}
+
+.picture{
+    width: 50%;
+    height: 100%;
+}
+
+.picture img{
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.detail_photo{
+    width: 564px;
+    text-align: left;
+    padding-bottom: 40px;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    line-height: 21px;
+    border-bottom: solid black 1px;
+}
+
+.global_photo{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.detail_photo h2{
+    text-transform: uppercase;
+    line-height: 1;
+    width: 420px;
+    padding-bottom: 10px;
+}
+
+.detail_photo p{
+    text-transform: uppercase;
+}
+
+.prisecontact{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    height: 118px;
+}
+
+.contact{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    padding: 30px 0;
+}
+
+.navphoto{
+width: 50%;
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+}
+
+.question{
+    font-size: 14px;
+    font-weight: 300;
+    width: 50%;
+}
+
+.bouttoncontact{
+    width: 272px;
+    height: 50px;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 8px 15px;
+    margin-left: 92px;
+    border-radius: 2px;
+    border: none;
+    box-shadow: 0px 0px 1px 0px black;
+    background-color: var(--Button);
+    transition: background-color 0.5s ease;
+}
+ .bouttoncontact:hover{
+    background-color: var(--Button-hover);
+    color: white;
+ }
+
+ .suggestion{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+ }
+
+ .aimerez h3{
+    text-transform: uppercase;
+    padding-top: 70px;
+    padding-bottom: 30px;
+}
+
+.cardphoto{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.apercu{
+    width: 81px;
+    height: 71px;
+    background-size: cover;
+}
+
+.fleches{
+    width: 81px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-top: 10px;
+}
