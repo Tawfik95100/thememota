@@ -19,7 +19,7 @@
 }
 
 .detail_photo{
-    width: 564px;
+    width: 50%;
     text-align: left;
     padding-bottom: 40px;
     font-size: 14px;
@@ -35,6 +35,7 @@
     align-items: flex-end;
     justify-content: space-between;
     width: 100%;
+    gap:10px;
 }
 
 .detail_photo h2{
@@ -53,7 +54,7 @@
     flex-direction: row;
     align-content: center;
     align-items: center;
-    justify-content: space-between;
+   justify-content: space-between;
     border-bottom: 1px solid black;
     height: 118px;
 }
@@ -75,16 +76,16 @@ align-items: flex-end;
 .question{
     font-size: 14px;
     font-weight: 300;
-    width: 50%;
+   
 }
 
 .bouttoncontact{
-    width: 272px;
+    width: 260px;
     height: 50px;
     font-size: 12px;
     font-weight: 400;
     padding: 8px 15px;
-    margin-left: 92px;
+    margin-left: 78px;
     border-radius: 2px;
     border: none;
     box-shadow: 0px 0px 1px 0px black;
@@ -97,9 +98,6 @@ align-items: flex-end;
  }
 
  .suggestion{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
     margin-bottom: 50px;
  }
 
@@ -107,14 +105,15 @@ align-items: flex-end;
     text-transform: uppercase;
     padding-top: 70px;
     padding-bottom: 30px;
+    text-align: left;
 }
 
 .cardphoto{
     display: flex;
     flex-direction: row;
     width: 100%;
-    flex-wrap: wrap;
     justify-content: space-evenly;
+    gap: 10px;
 }
 
 .apercu{
@@ -131,3 +130,118 @@ align-items: flex-end;
     justify-content: space-between;
     margin-top: 10px;
 }
+
+.bloc_affichage{
+    width: 564px;
+    height: 495px;
+    }
+
+    .image{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .survol_photo{
+        position: relative;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        bottom: 501px;
+        transition: background-color 0.5s ease;
+    }
+
+    .referencephoto{
+        font-size: 14px;
+        font-weight: 500;
+        color: white;
+        font-family: "Poppins_regular";
+        position: relative;
+        left: 10px;
+        top: 467px;
+        display: none;
+    }
+
+    .categorie_photo{
+        font-size: 14px;
+        color: white;
+        font-weight: 400;
+        position: relative;
+        left: 470px;
+        top: 449px;
+        text-transform: uppercase;
+        display: none;
+    }
+
+        .icon_eye{
+            position: relative;
+            left: 46%;
+            top: 29vh;
+            width: 50%;
+            cursor: pointer;
+            display: none;
+        }
+
+        .icon_fullscreen{
+            position: relative;
+            bottom: 66px;
+            left: 485px;
+            width: 7%;
+            cursor: pointer;
+            display: none;
+        }
+
+        .survol_photo:hover{
+            background-color: #000000ba;
+        }
+
+        .bloc_affichage:hover .referencephoto,
+        .bloc_affichage:hover .categorie_photo,
+        .bloc_affichage:hover .icon_eye,
+        .bloc_affichage:hover .icon_fullscreen{
+            display: block;
+        }
+
+        @media (max-width:800px){
+            .global_photo{
+                flex-direction: column;
+                align-items: center;
+                gap: 50px;
+            }
+            .picture{
+                width: 100%;
+            }
+            .detail_photo{
+                width: 100%;
+            }
+            .prisecontact{
+                flex-direction: column;
+                height: 150px;
+            }
+            .contact{
+                flex-direction: column;
+                text-align: left;
+            }
+            .bouttoncontact{
+                margin-left: 0;
+            }
+            .navphoto{
+                display: none;
+            }
+            .aimerez h3{
+                text-align: center;
+                padding-top: 30px;
+            }
+            .cardphoto{
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .detail_photo h2{
+              font-size: 46px;
+            }
+            
+        
+
+        }

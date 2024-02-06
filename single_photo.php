@@ -97,6 +97,39 @@ $next_thumbnail = $next_photo ? get_the_post_thumbnail_url($next_photo->ID,'thum
         <h3>Vous aimerez AUSSI</h3>
     </div>
         <div class='cardphoto'>
+            <?php 
+            $categories = get_the_terms(get_the_ID(),'categorie');
+            if($categories && !is_wp_error($categories))
+            {
+                $categorie_id= wp_list_pluck($categories,'term_id');
+                $args = array(
+                    'post_type'=> 'photos',
+                    'posts_per_page'=> 2,
+                    'orderby'=>'rand',
+                    'post__not_in'=>array(get_the_ID()),
+                    'tax_query' =>array(
+                        array(
+                          'taxonomy' =>'categorie',
+                          'field'=>'term_id',
+                          'terms'=>$categorie_id,
+                        ),
+                    ),
+                );
+                $compteur = 0 ;
+                $images_similaire = new wp_query($args) ;
+                while($images_similaire -> have_posts()){
+                    $images_similaire -> the_post();
+                    $photo = get_the_post_thumbnail_url(null,'large');
+                    $reference = get_field('reference');
+                    $nomcategorie = isset($categories[0]) ? $categories[0] -> name :'';
+                    get_template_part('templates_part/photo_block');
+                    $compteur ++ ;
+                }
+                if ( $compteur === 0 ){ 
+                    echo ' <p> Pas de photo similaire dans la categorie: '. $nomcategorie .' </p> ';
+                }
+            }
+            ?>
         
         </div>
 </div>
