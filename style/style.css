@@ -3,6 +3,7 @@
 @import 'composant/footer.css';
 @import 'composant/modale.css';
 @import 'composant/album.css';
+@import 'composant/hero.css';
 
 :root {
     --hover: #ffd6d6;
