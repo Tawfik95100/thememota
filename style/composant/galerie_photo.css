@@ -1,0 +1,9 @@
+#galerie_photo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    gap: 10px;
+}
