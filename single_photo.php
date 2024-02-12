@@ -116,7 +116,7 @@ $next_thumbnail = $next_photo ? get_the_post_thumbnail_url($next_photo->ID,'thum
                     ),
                 );
                 $compteur = 0 ;
-                $images_similaire = new wp_query($args) ;
+                $images_similaire = new WP_Query($args) ;
                 while($images_similaire -> have_posts()){
                     $images_similaire -> the_post();
                     $photo = get_the_post_thumbnail_url(null,'large');

@@ -10,7 +10,7 @@ $image_aleatoire = array(
     "orderby" => "rand",
 );
 
-$image_query= new wp_query($image_aleatoire);
+$image_query= new WP_Query($image_aleatoire);
 
 if($image_query -> have_posts()) {
     while($image_query -> have_posts()) {

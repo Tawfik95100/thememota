@@ -7,3 +7,28 @@
     margin-bottom: 50px;
     gap: 10px;
 }
+
+.chargerplus{
+    width: 100%;
+}
+
+.charger_plus{
+    display: block;
+    width: 272px;
+    height: 50px;
+    font-weight: 400;
+    font-size: 12px;
+    border-radius: 2px;
+    padding: 8px 15px;
+    border: none;
+    margin: auto;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    background-color: var(--Button);
+    transition: background-color 0.5s ease;
+}
+
+.charger_plus:hover{
+    background-color: var(--Button-hover);
+    color: white;
+}
