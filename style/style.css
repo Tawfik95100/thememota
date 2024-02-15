@@ -5,6 +5,7 @@
 @import 'composant/album.css';
 @import 'composant/hero.css';
 @import 'composant/galerie_photo.css';
+@import 'composant/filtres.css';
 
 :root {
     --hover: #ffd6d6;

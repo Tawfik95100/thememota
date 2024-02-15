@@ -28,3 +28,12 @@
     position: absolute;
     top: 2px;
 }
+
+@media (max-width: 770px){
+    .entete h1{
+font-size: 45px;
+    }
+    .entete{
+        height: 379px;
+    }
+}

@@ -1,3 +1,38 @@
+<div id="dropdownbox">
+  <?php
+  $taxonomies = [
+      'categorie' => 'CATÉGORIES',
+      'format'    => 'FORMATS',
+      'annees' => 'TRIER PAR',
+  ];
+
+  foreach ($taxonomies as $taxonomy_slug => $label) {
+      $terms = get_terms($taxonomy_slug);
+
+      if (!is_wp_error($terms) && !empty($terms)) {
+          echo "<select id='{$taxonomy_slug}' class='custom-select taxonomy-select'>";
+          echo "<option value=''>{$label}</option>";
+
+          if ($taxonomy_slug === 'annees') {
+             
+              echo "<option value='recentes'>A partir des plus récentes</option>";
+              echo "<option value='anciennes'>A partir des plus anciennes</option>";
+          } else {
+              
+              foreach ($terms as $term) {
+                  echo "<option value='{$term->slug}'>{$term->name}</option>";
+              }
+          }
+
+          echo "</select>";
+      }
+  }
+
+  ?>
+</div>
+
+
+
 <div id='galerie_photo'>
 
 <?php
