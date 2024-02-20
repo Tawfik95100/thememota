@@ -6,6 +6,7 @@
 @import 'composant/hero.css';
 @import 'composant/galerie_photo.css';
 @import 'composant/filtres.css';
+@import 'composant/lightbox.css';
 
 :root {
     --hover: #ffd6d6;

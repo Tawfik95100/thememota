@@ -16,7 +16,7 @@ $post_url = get_permalink();
          <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/icon_eye.svg" alt="voire plus">
          </a>  
         </div>
-              <div class='icon_fullscreen' data-full='<?php echo esc_url($photo);?>' data-category='<?php echo esc_attr($nomcategorie);?>' date-reference='<?php echo esc_attr($reference);?>' >
+              <div class='icon_fullscreen' data-full='<?php echo esc_url($photo);?>' data-category='<?php echo esc_attr($nomcategorie);?>' data-reference='<?php echo esc_attr($reference);?>' >
                <img class='photo_fullscreen' src="<?php echo esc_url(get_template_directory_uri());?>/assets/images/icon_fullscreen.svg" alt="plein ecran">
               </div>
     </div>

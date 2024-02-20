@@ -48,6 +48,10 @@
   .select2-container--open .select2-dropdown--below {
     border-radius: 0 0 8px 8px !important;
   }
+
+  .select2-container--open .select2-dropdown{
+    top:-14px;
+  }
   
   .select2-container--default
     .select2-selection--single
@@ -72,5 +76,8 @@
   }
   .select2-container{
     width: 455px !important;
+  }
+  .select2-container--open .select2-dropdown{
+    top:0;
   }
  }
